@@ -91,7 +91,8 @@ classDiagram
 
 | 処理前 (Before) | 処理後 (After) |
 |:---------------:|:--------------:|
-| ![before](data/input/1.jpg) | ![after](data/output/1.jpg) |
+| ![before](before.jpg) | ![after](after.jpg) |
+
 
 # Image Processor Demo
 
