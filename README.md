@@ -87,11 +87,6 @@ classDiagram
 
     Main --> BatchProcessor
 ```
-## 処理前・処理後 (Before and After)
-
-| 処理前 (Before) | 処理後 (After) |
-|:---------------:|:--------------:|
-| ![before](before.jpg) | ![after](after.jpg) |
 
 
 # Image Processor Demo
