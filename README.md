@@ -28,7 +28,8 @@
 3. 以下のコマンドを実行
    ```bash
    mvn clean package
-   java -jar target/image-processor-1.0-SNAPSHOT.jar
+   java -jar target/image-processor-1.0-SNAPSHOT-jar-with-dependencies.jar
+
    ```
 
 ## システム構成図 (UML Diagram)
@@ -116,5 +117,5 @@ This project is a Java-based batch image processing tool designed for demonstrat
 3. Execute the following command:
    ```bash
    mvn clean package
-   java -jar target/image-processor-1.0-SNAPSHOT.jar
+   java -jar target/image-processor-1.0-SNAPSHOT-jar-with-dependencies.jar
    ```
