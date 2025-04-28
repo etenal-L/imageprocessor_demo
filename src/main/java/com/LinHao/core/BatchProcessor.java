@@ -31,7 +31,7 @@ public class BatchProcessor {
 
                     //処理器
                     ImageProcessor normalizer = new SizeNormalizer();
-                    ImageProcessor watermarkAdder = new WatermarkAdder("金锦电子商务  Jin Jin store");
+                    ImageProcessor watermarkAdder = new WatermarkAdder("test store");
                     ImageProcessor captionDecorator = new CaptionDecorator(
                         config.getProductModel(), 
                         config.getProductName(),
