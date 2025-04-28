@@ -29,6 +29,63 @@
    ```bash
    mvn clean package
    java -jar target/image-processor-1.0-SNAPSHOT.jar
+   ```
+
+## システム構成図 (UML Diagram)
+```mermaid
+classDiagram
+    class ImageProcessor {
+        <<interface>>
+        +process(BufferedImage): BufferedImage
+    }
+    class SizeNormalizer {
+        +STANDARD_SIZE: int
+        +process(BufferedImage): BufferedImage
+    }
+    class WatermarkAdder {
+        -watermarkText: String
+        +process(BufferedImage): BufferedImage
+    }
+    class CaptionDecorator {
+        -productModel: String
+        -productName: String
+        -brandName: String
+        +process(BufferedImage): BufferedImage
+    }
+    class BatchProcessor {
+        +processAll(String excelPath)
+    }
+    class ExcelConfig {
+        -number: String
+        -productModel: String
+        -productName: String
+        -brandName: String
+        -imagePath: String
+        -outputPath: String
+        +getNumber()
+        +getProductModel()
+        +getProductName()
+        +getBrandName()
+        +getImagePath()
+        +getOutputPath()
+    }
+    class ExcelReader {
+        +readExcel(String excelPath): List~ExcelConfig~
+    }
+    class Main {
+        +main(String[] args)
+    }
+
+    ImageProcessor <|-- SizeNormalizer
+    ImageProcessor <|-- WatermarkAdder
+    ImageProcessor <|-- CaptionDecorator
+
+    BatchProcessor --> ExcelReader
+    BatchProcessor --> ExcelConfig
+    BatchProcessor --> ImageProcessor
+
+    Main --> BatchProcessor
+```
 
 # Image Processor Demo
 
@@ -60,3 +117,4 @@ This project is a Java-based batch image processing tool designed for demonstrat
    ```bash
    mvn clean package
    java -jar target/image-processor-1.0-SNAPSHOT.jar
+   ```
