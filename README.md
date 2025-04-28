@@ -87,11 +87,6 @@ classDiagram
 
     Main --> BatchProcessor
 ```
-## 処理前・処理後 (Before and After)
-
-| 処理前 (Before) | 処理後 (After) |
-|:---------------:|:--------------:|
-| ![before](https://github.com/etenal-L/imageprocessor_demo/raw/main/data/input/1.jpg) | ![after](https://github.com/etenal-L/imageprocessor_demo/raw/main/data/output/1.jpg) |
 
 
 # Image Processor Demo
